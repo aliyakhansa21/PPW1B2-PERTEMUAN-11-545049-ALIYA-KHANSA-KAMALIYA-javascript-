@@ -1,0 +1,66 @@
+<!-- Tulis code yg berisikan javascript berisikan prompt() meminta input 2 bilangan.
+Kemudian buat cek kondisi kedua bilangan tersebut. Tampilkan hasilnya.
+EX: BILANGAN KE-1 LEBIH BESAR DARI BILANGAN KE-2  -->
+
+<!DOCTYPE>
+<html>
+    <head>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content = "width=device-width, initial-scale = 1.0">
+        <title>Tugas Laprak 3</title>
+    </head>
+
+    <body>
+       <h1>Cek Kondisi Dua Bilangan</h1>
+       <button onclick = "inputBilangan1()">Bilangan 1</button>
+       <button onclick = "inputBilangan2()">Bilangan 2</button>
+       <button onclick = "cekKondisi()">Cek Kondisi Kedua Bilangan</button>
+
+       <p id="hasil"></p>
+
+
+       <script>
+            let b1;
+            let b2;
+
+            function inputBilangan1(){
+                let input = prompt("Masukkan bilangan 1");
+                if (input == null || input == "") {
+                    alert("belum mengisi bilangan 1");
+                } else {
+                    b1 = Number(input);
+                    console.log("Bilangan 1: " + b1);
+                }
+            }
+
+            function inputBilangan2(){
+                let input = prompt("Masukkan bilangan 2");
+                if (input == null || input == "") {
+                    alert("belum mengisi bilangan 2");
+                } else {
+                    b2 = Number(input);
+                    console.log("Bilangan 2: " + b2);
+                }
+            }
+
+            function cekKondisi(){
+                if (b1 == null || b1 == "" || b2 == null || b2 == ""){
+                    alert("Bilangan 1 atau 2 belum diisi dengan benar");
+                
+                } else{
+                    let hasil;
+                    if (b1 > b2){
+                        hasil = "BILANGAN KE-1 LEBIH BESAR DARI BILANGAN KE-2";
+                    } else if (b2 > b1){
+                        hasil = "BILANGAN KE-2 LEBIH BESAR DARI BILANGAN KE-1"
+                    } else {
+                        hasil = "BILANGAN KE-1 SAMA DENGAN BILANGAN KE-2"
+                    }
+                    document.getElementById("hasil").innerText = hasil; 
+                }
+            }
+
+       </script>
+    </body>
+    
+</html>
