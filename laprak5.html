@@ -1,0 +1,92 @@
+<!-- buatlah sebuah kalkulator menggunakan Javascript. 
+Konsep kalkulatornya hampir sama seperti latihan minggu lalu, 
+namun ditambahkan fungsi untuk menjumlahkan, mengurangi, dan membagi bilangan. 
+Secara sekilas, kalkulator ini akan memiliki 2 inputan untuk bilangan pertama dan kedua;
+ 4 tombol dengan fungsi untuk tambah, kurang, bagi, kali; 
+ dan terakhir ada bagian untuk output hasil perhitungannya. -->
+
+ <!DOCTYPE>
+ <html>
+    <head>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content = "width=device-width, initial-scale = 1.0">
+        <title>Tugas Laprak 5</title>
+    </head>
+
+    <body>
+        <h1>Kalkulator menggunakan javascript</h1>
+        <button onclick = "inputBilangan1()">Masukkan bilangan 1</button>
+        <button onclick = "inputBilangan2()">Masukkan bilangan 2</button>
+        <button onclick = "tambah()">Tambah</button>
+        <button onclick = "kurang()">Kurang</button>
+        <button onclick = "bagi()">Pembagian</button>
+        <button onclick = "kali()">Perkalian</button>
+
+        <p id="hasil">Hasil akan muncul disini</p>
+
+        <script>
+            let b1;
+            let b2;
+
+            function inputBilangan1(){
+                let input = prompt("Masukkan bilangan 1");
+                if (input == null || input == "") {
+                    alert("belum mengisi bilangan 1");
+                } else {
+                    b1 = Number(input);
+                    console.log("Bilangan 1: " + b1);
+                }
+            }
+
+            function inputBilangan2(){
+                let input = prompt("Masukkan bilangan 2");
+                if (input == null || input == "") {
+                    alert("belum mengisi bilangan 2");
+                } else {
+                    b2 = Number(input);
+                    console.log("Bilangan 2: " + b2);
+                }
+            }
+
+            function tambah(){
+                if (b1 == null || b1 == "" || b2 == null || b2 == ""){
+                    alert("Bilangan 1 atau 2 belum diisi dengan benar");
+                } else{
+                    let hasil = b1 + b2;
+                    console.log ("Hasil tambah:" + hasil);
+                    document.getElementById("hasil").innerText = "hasil: " + hasil;
+                }   
+            }
+
+            function kurang(){
+                if (b1 == null || b1 == "" || b2 == null || b2 == ""){
+                    alert("Bilangan 1 atau 2 belum diisi dengan benar");
+                } else{
+                    let hasil = b1 - b2;
+                    console.log("Hasil kurang:" + hasil);
+                    document.getElementById("hasil").innerText = "hasil: " + hasil;
+                }   
+            }
+
+            function bagi(){
+                if (b1 == null || b1 == "" || b2 == null || b2 == ""){
+                    alert("Bilangan 1 atau 2 belum diisi dengan benar");
+                } else{
+                    let hasil = b1/b2;
+                    console.log("Hasil bagi:" + hasil);
+                    document.getElementById("hasil").innerText = "hasil: " + hasil;
+                }
+            }
+
+            function kali(){
+                if (b1 == null || b1 == "" || b2 == null || b2 == ""){
+                    alert("Bilangan 1 atau 2 belum diisi dengan benar");
+                } else{
+                    let hasil = b1 * b2;
+                    console.log("Hasil kali:" + hasil);
+                    document.getElementById("hasil").innerText = "hasil: " + hasil;
+                }  
+            }
+        </script>
+    </body>
+ </html>

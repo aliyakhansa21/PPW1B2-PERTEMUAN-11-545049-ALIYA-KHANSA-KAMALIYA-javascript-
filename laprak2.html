@@ -1,0 +1,31 @@
+<!-- Silahkan buat 1 file html yang isinya menampilkan 
+output dari javascript yang dibuat menggunakan 
+Fungsi console.log(), Fungsi alert(), Fungsi document.write(), 
+dan innerHTML. (Isi teks html dan javascript bisa anda 
+variasikan sendiri). -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Output JavaScript</title>
+</head>
+<body>
+  <h1>Contoh Output JavaScript</h1>
+
+  <p id="hasilInnerHTML">Ini akan diganti dengan innerHTML</p>
+
+  <script>
+    // 1. console.log()
+    console.log("Ini adalah output dari console.log(). Cek di tab Console (F12).");
+
+    // 2. alert()
+    alert("Ini adalah output dari alert()!");
+
+    // 3. document.write()
+    document.write("<p>Ini adalah output dari document.write()</p>");
+
+    // 4. innerHTML
+    document.getElementById("hasilInnerHTML").innerHTML = "Teks ini diubah menggunakan innerHTML!";
+  </script>
+</body>
+</html>
